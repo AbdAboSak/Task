@@ -14,7 +14,8 @@
             padding: 10px;
             margin: 10px;
         }
-        .export{
+
+        .export {
             margin-right: 0;
             margin-top: 0;
         }
@@ -22,13 +23,15 @@
 </head>
 <body>
 <div class="container">
-    <a href="{{route('export-pdf',serialize($qrCodes) )}}" > dd</a>
     <div class="row">
+        {{$a = 2}}
+        <a href="{{route('export-pdf', $a)}}"> ddd </a>
+        </form>
         @foreach($qrCodes as  $qrcode)
             <div>
                 {{$qrcode}}
             </div>
-            @endforeach
+        @endforeach
     </div>
     <a href="/" style="margin:10px ;background-color:{{$color}}" class="btn btn-primary form-control">Go Back </a>
 </div>
